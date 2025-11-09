@@ -1,7 +1,7 @@
-from string_utils import polindrome
+from string_utils import palindrome
 
-def test_polidrom():
-    assert palidrome('stats')
-    assert palidrome('deified')
-    assert not palidrome('hello')
-    assert not palidrome('world')
+def test_palindrome():
+    assert palindrome("stats")
+    assert palindrome("deified")
+    assert not palindrome("hello")
+    assert not palindrome("world")
