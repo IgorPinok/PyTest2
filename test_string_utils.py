@@ -1,7 +1,10 @@
+import pytest
 from string_utils import palindrome
 
-def test_palindrome():
-    assert palindrome("stats")
-    assert palindrome("deified")
-    assert not palindrome("hello")
-    assert not palindrome("world")
+@pytest.mark.parametrize("s", ["stats", "deified"])
+def test_palindrome_true(s):
+    assert palindrome(s)
+
+@pytest.mark.parametrize("s", ["hello", "world"])
+def test_palindrome_false(s):
+    assert not palindrome(s)
